@@ -1,0 +1,14 @@
+<label>element1 and element 2 are ar dragabble and  their drop is detected by dropzone1 and dropzone 2 </label>
+<br>
+<br>
+<div id="source" style="height: 50px; width: 100px;border: 1px grey solid">
+	<a draggable="true" data-name="elem1" dragstart="event.dataTransfer.setData('text/plain','elem1')" (dragend)="logDrop($event, 'elem1')">element1</a>
+	<a draggable="true" data-name="elem2" (dragstart)="logStart($event, 'elem2')" (dragend)="logDrop($event,'elem2')">element2</a>
+</div>
+<div class="dropzone" id="dropzone1" style="height: 100px; width: 100px; border: 1px grey solid" (dragover)="dragOverEvent($event,'dropzone1')">
+  dropzone1
+</div>
+  <div class="dropzone" id="dropzone2" style="height: 100px; width: 100px; border: 1px grey solid" (dragover)="dragOverEvent($event,'dropzone2')">
+    dropzone2
+</div>
+{{name}}
